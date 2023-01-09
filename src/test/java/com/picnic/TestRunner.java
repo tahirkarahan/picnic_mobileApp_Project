@@ -4,6 +4,7 @@ import com.picnic.pages.HomePage;
 import com.picnic.utility.TestBase;
 import com.picnic.utility.TestUtility;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -28,8 +29,8 @@ public class TestRunner extends TestBase {
         Assert.assertTrue(homePage.verifyLoginSuccessfully());
     }
 
-//    @AfterTest
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @AfterTest
+    public void tearDown() {
+        driver.quit();
+    }
 }
